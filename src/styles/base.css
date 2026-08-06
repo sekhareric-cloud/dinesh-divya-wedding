@@ -1,0 +1,218 @@
+/* ─────────────────────────────────────────────────────────────
+   Base — reset, typography, shared utilities
+   ───────────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-serif);
+  font-size: var(--step-body);
+  line-height: 1.7;
+  color: var(--ink);
+  background-color: var(--ivory);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+::selection {
+  background: var(--gold-bright);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold-deep);
+  outline-offset: 3px;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  z-index: 200;
+  background: var(--ink);
+  color: var(--ivory);
+  padding: 0.75rem 1.25rem;
+  font-family: var(--font-sans);
+  font-size: var(--step-small);
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+}
+
+/* Layout */
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+.container--narrow {
+  max-width: var(--container-narrow);
+}
+
+.section {
+  padding-block: var(--section-y);
+}
+.section--cream {
+  background: var(--cream);
+}
+.section--ink {
+  background: var(--ink);
+  color: var(--ivory);
+}
+
+/* Typographic helpers */
+.eyebrow {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: var(--step-eyebrow);
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  color: var(--rose-deep);
+  display: block;
+}
+.section--ink .eyebrow {
+  color: var(--rose-bright);
+}
+
+.section-title {
+  font-weight: 500;
+  font-size: var(--step-h2);
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  margin-top: 0.6rem;
+}
+
+.section-head {
+  text-align: center;
+  max-width: 46rem;
+  margin-inline: auto;
+  margin-bottom: clamp(2.5rem, 1.5rem + 3vw, 4.5rem);
+}
+.section-head p {
+  color: var(--ink-soft);
+  font-size: var(--step-lead);
+  font-style: italic;
+  margin-top: 1rem;
+}
+.section--ink .section-head p {
+  color: rgba(250, 246, 239, 0.75);
+}
+
+/* Ornamental divider: hairline + center diamond */
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem auto 0;
+  max-width: 12rem;
+  color: var(--gold);
+}
+.divider::before,
+.divider::after {
+  content: '';
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(to var(--dir, right), transparent, var(--line-strong));
+}
+.divider::after {
+  --dir: left;
+}
+.divider span {
+  width: 8px;
+  height: 8px;
+  transform: rotate(45deg);
+  border: 1px solid var(--sage);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-sans);
+  font-size: var(--step-small);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 0.95rem 2.1rem;
+  border: 1px solid var(--gold);
+  color: var(--gold-deep);
+  background: transparent;
+  border-radius: var(--radius);
+  transition: background var(--dur) var(--ease), color var(--dur) var(--ease),
+    transform 0.4s var(--ease);
+}
+.btn:hover {
+  background: var(--gold);
+  color: #fff;
+  transform: translateY(-2px);
+}
+.btn--solid {
+  background: var(--gold);
+  color: #fff;
+}
+.btn--solid:hover {
+  background: var(--gold-deep);
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease);
+  transition-delay: var(--reveal-delay, 0s);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "dinesh-divya-wedding",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Single-page Christian wedding website for Tyndale & Sophia",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4",
+    "vite": "^5.4.8"
+  }
+}
