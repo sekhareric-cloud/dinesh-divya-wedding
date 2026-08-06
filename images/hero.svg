@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Elegant golden backdrop placeholder">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f8f1e4" />
+      <stop offset="0.55" stop-color="#efe2cd" />
+      <stop offset="1" stop-color="#e4d1b4" />
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="36%" r="62%">
+      <stop offset="0" stop-color="#fffaf0" stop-opacity="0.92" />
+      <stop offset="1" stop-color="#fffaf0" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c9a463" />
+      <stop offset="1" stop-color="#a67c3d" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="1200" fill="url(#bg)" />
+  <rect width="1600" height="1200" fill="url(#glow)" />
+
+  <!-- faint concentric halo -->
+  <g fill="none" stroke="url(#gold)" stroke-opacity="0.16" stroke-width="1.5">
+    <circle cx="800" cy="480" r="286" />
+    <circle cx="800" cy="480" r="344" />
+  </g>
+
+  <!-- laurel sprigs -->
+  <g fill="none" stroke="url(#gold)" stroke-opacity="0.4" stroke-width="2.2" stroke-linecap="round">
+    <path d="M660 660 q60 -70 130 -92" />
+    <path d="M690 648 q6 -34 -14 -60" />
+    <path d="M716 632 q8 -36 -10 -66" />
+    <path d="M744 618 q10 -36 -6 -68" />
+    <path d="M940 660 q-60 -70 -130 -92" />
+    <path d="M910 648 q-6 -34 14 -60" />
+    <path d="M884 632 q-8 -36 10 -66" />
+    <path d="M856 618 q-10 -36 6 -68" />
+  </g>
+
+  <!-- monogram -->
+  <circle cx="800" cy="480" r="118" fill="none" stroke="url(#gold)" stroke-width="2" stroke-opacity="0.55" />
+  <text x="800" y="512" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="120" fill="url(#gold)" fill-opacity="0.6">T&amp;S</text>
+
+  <text x="800" y="880" text-anchor="middle" font-family="Georgia, serif" font-size="30" letter-spacing="10" fill="#8c6d3e" fill-opacity="0.55">REPLACE WITH YOUR PHOTO</text>
+</svg>
