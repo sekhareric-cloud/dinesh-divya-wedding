@@ -77,8 +77,7 @@ export const content: WeddingContent = {
   verse: {
     text: 'Marriage is honourable in all.',
     reference: 'Hebrews 13:4',
-    blessing:
-      'With thankful hearts and the blessings of our beloved parents, we invite you to celebrate the beginning of Dinesh and Divya’s life together.',
+    blessing: '',
   },
 
   family: {
