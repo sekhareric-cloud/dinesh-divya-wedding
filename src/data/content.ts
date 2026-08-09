@@ -134,24 +134,25 @@ export const content: WeddingContent = {
   },
 
   venue: {
-    eyebrow: 'Where',
-    title: 'Wedding & Reception',
-    ceremony: {
-      name: venueName,
-      time: 'Wedding Ceremony · 10:00 AM',
-      address: venueAddress,
-      mapEmbedUrl: 'https://www.google.com/maps?q=Chavas%20Grand%20A%2FC%20Kalyana%20Mandapam%2C%20Tenali%2C%20Andhra%20Pradesh&output=embed',
-    },
-    reception: {
-      name: venueName,
-      time: 'Reception & Lunch · 12:30 PM onwards',
-      address: venueAddress,
-      mapEmbedUrl: 'https://www.google.com/maps?q=Chavas%20Grand%20A%2FC%20Kalyana%20Mandapam%2C%20Tenali%2C%20Andhra%20Pradesh&output=embed',
-    },
-    directions:
-      'The wedding, reception, and lunch will all be held at Chavas Grand A/C Kalyana Mandapam on Govt. Hospital Road, Tenali.',
+  eyebrow: 'Where',
+  title: 'Wedding & Reception',
+
+  ceremony: {
+    name: venueName,
+    time: 'Wedding Ceremony · 10:00 AM',
+    address: '',
+    mapEmbedUrl: '',
   },
 
+  reception: {
+    name: '',
+    time: 'Reception & Lunch · 12:30 PM onwards',
+    address: '',
+    mapEmbedUrl: '',
+  },
+
+  directions: '',
+},
   gallery: {
     eyebrow: 'Moments',
     title: 'Dinesh & Divya',
@@ -161,6 +162,8 @@ export const content: WeddingContent = {
       { src: '/images/dinesh-divya-couple.jpg', alt: 'Dinesh and Divya holding hands', caption: 'Hand in hand' },
       { src: '/images/dinesh-divya-family-1.jpg', alt: 'Dinesh and Divya with family', caption: 'Blessed by family' },
       { src: '/images/dinesh-divya-family-2.jpg', alt: 'Dinesh and Divya with loved ones', caption: 'Surrounded by love' },
+      { src: '/images/dinesh-divya-porat.JPG', alt: 'Dinesh and Divya', caption: 'Together in joy' },
+      { src: '/images/IMG_1597.JPG', alt: 'Dinesh and Divya',caption: 'A special moment' },
     ],
   },
 
