@@ -138,10 +138,10 @@ export const content: WeddingContent = {
   title: 'Wedding & Reception',
 
   ceremony: {
-    name: venueName,
+    name: 'Chavas Grand A/C Kalyana Mandapam',
     time: 'Wedding Ceremony · 10:00 AM',
     address: '',
-    mapEmbedUrl: '',
+    mapEmbedUrl: 'https://www.google.com/maps?q=Chavas%20Grand%20A%2FC%20Kalyana%20Mandapam%2C%20Tenali%2C%20Andhra%20Pradesh&output=embed',
   },
 
   reception: {
