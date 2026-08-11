@@ -13,7 +13,7 @@ export function initAudio(): void {
   const btn = document.querySelector<HTMLButtonElement>('[data-mute-btn]');
   if (!btn) return;
 
-  const audio = new Audio('/audio/canon.mp3');
+  const audio = new Audio('/audio/wedding-hymn.mp3');
   audio.loop = true;
   audio.preload = 'auto';
   audio.volume = 0.5;
